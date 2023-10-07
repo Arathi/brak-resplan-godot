@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpar061wwdyau"]
+
+[ext_resource type="Script" path="res://components/student/icon.gd" id="1_d4jjv"]
+[ext_resource type="Texture2D" uid="uid://c0hfrpsaodnox" path="res://assets/images/students/icon/10003.webp" id="2_mo2aa"]
+[ext_resource type="Script" path="res://components/student/borders.gd" id="3_dfu5t"]
+
+[node name="icon" type="Node2D"]
+script = ExtResource("1_d4jjv")
+id = 10002
+owned = true
+
+[node name="upper" type="Node2D" parent="."]
+
+[node name="clip" type="Polygon2D" parent="upper"]
+clip_children = 1
+position = Vector2(5, 5)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(5, 0, 118, 0, 120, 2, 120, 115, 115, 120, 2, 120, 0, 118, 0, 5)
+
+[node name="avatar" type="Sprite2D" parent="upper/clip"]
+texture = ExtResource("2_mo2aa")
+centered = false
+
+[node name="attack_type" type="Polygon2D" parent="upper/clip"]
+color = Color(1, 0, 0, 0.592157)
+offset = Vector2(0, 110)
+polygon = PackedVector2Array(0, 0, 60, 0, 60, 10, 0, 10)
+
+[node name="armor_type" type="Polygon2D" parent="upper/clip"]
+color = Color(0, 0, 1, 0.592157)
+offset = Vector2(60, 110)
+polygon = PackedVector2Array(0, 0, 60, 0, 60, 10, 0, 10)
+
+[node name="rank" type="Sprite2D" parent="upper/clip"]
+
+[node name="role_clip" type="Polygon2D" parent="upper/clip"]
+
+[node name="role" type="Sprite2D" parent="upper/clip/role_clip"]
+
+[node name="not_owned" type="Polygon2D" parent="upper/clip"]
+color = Color(0, 0, 0, 0.752941)
+polygon = PackedVector2Array(0, 0, 120, 0, 120, 120, 0, 120)
+
+[node name="borders" type="Node2D" parent="upper"]
+script = ExtResource("3_dfu5t")
+
+[node name="lower" type="Node2D" parent="."]
+
+[node name="name" type="Label" parent="lower"]
+offset_top = 130.0
+offset_right = 130.0
+offset_bottom = 155.0
+text = "名称"
+horizontal_alignment = 1
+vertical_alignment = 1
