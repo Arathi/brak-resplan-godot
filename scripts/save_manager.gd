@@ -5,6 +5,10 @@ var students: Dictionary = {}
 var inventory: Dictionary = {}
 
 
+func get_student_by_id(id: int) -> Student:
+	return students.get(id)
+
+
 func load_from_file(slot: String = "default"):
 	var path = get_file_path(slot)
 	if FileAccess.file_exists(path):

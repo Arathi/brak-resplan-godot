@@ -22,12 +22,21 @@ func load_student_by_id(id: int) -> StudentMetadata:
 	return students[id] as StudentMetadata
 
 
-func load_students(lang: String = "zh"):
+func load_students(lang: String = "zh", force: bool = false):
+	var skip: bool = false
+	if !students.is_empty():
+		print("学生元数据（%s）已加载" % self.lang)
+		skip = true
+	
+	if skip:
+		return
+
 	var metadata_list = load_metadata(lang, "students")
 	for metadata in metadata_list:
 		var student = convert_student(metadata)
 		students[student.id] = student
 	print("加载学生数据（%s）%d条" % [lang, students.size()])
+	self.lang = lang
 
 
 func convert_student(metadata):
