@@ -1,3 +1,4 @@
+class_name StudentIcon
 extends Node2D
 
 

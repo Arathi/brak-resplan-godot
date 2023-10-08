@@ -4,3 +4,10 @@
 
 [node name="list" type="Node2D"]
 script = ExtResource("1_ed8f4")
+
+[node name="scroll_container" type="ScrollContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="h_box" type="HBoxContainer" parent="scroll_container"]
+layout_mode = 2

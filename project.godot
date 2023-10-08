@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 DataLoader="*res://scripts/data_loader.gd"
 SaveManager="*res://scripts/save_manager.gd"
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
 [dotnet]
 
 project/assembly_name="brak-resplan-31007"

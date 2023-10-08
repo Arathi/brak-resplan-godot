@@ -63,7 +63,9 @@ func convert_student(metadata):
 		"HeavyArmor": student.armor_type = StudentMetadata.ArmorType.Heavy
 		"Unarmed": student.armor_type = StudentMetadata.ArmorType.Special
 		"ElasticArmor": student.armor_type = StudentMetadata.ArmorType.Elastic
+	student.background = metadata.CollectionBG
 	
+	# i18n
 	i18n["student.%d.name" % student.id] = metadata.Name
 	
 	return student

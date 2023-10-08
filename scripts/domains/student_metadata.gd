@@ -54,3 +54,6 @@ var attack_type: AttackType
 # 护甲类型
 var armor_type: ArmorType
 
+# 背景图片
+var background: String
+
