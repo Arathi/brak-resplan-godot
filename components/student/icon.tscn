@@ -44,7 +44,7 @@ position = Vector2(120, 120)
 scale = Vector2(0.6, 0.6)
 color = Color(0, 0, 0, 1)
 offset = Vector2(-44, -44)
-polygon = PackedVector2Array(0, 0, 44, 0, 44, 44, 0, 44)
+polygon = PackedVector2Array(5, 0, 44, 0, 44, 44, 0, 44, 0, 5)
 
 [node name="role" type="Sprite2D" parent="upper/clip/combat_class"]
 texture = ExtResource("4_mo5yh")

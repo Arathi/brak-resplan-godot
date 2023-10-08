@@ -27,6 +27,7 @@ func update():
 	update_portrait()
 	update_background()
 
+
 func update_portrait():
 	var texture: Texture2D = load("res://assets/images/students/portrait/%d.webp" % id)
 	var texture_height = texture.get_height()

@@ -1,12 +1,14 @@
+@tool
 extends Node2D
 
 
 var border: int = 1
+const sqrt2: float = sqrt(2)
 
 
 @export var padding: int = 4
 @export var radius: int = 8
-@export var color: Color = Color("#cccccc")
+@export var color: Color = Color("#D7DBDC")
 
 
 var size: int:
@@ -76,10 +78,10 @@ func _draw():
 	
 	# rb
 	draw_polygon_by_apex(
-		Vector2(size - border, size - gap),
+		Vector2(size - sqrt2, size - gap),
 		Vector2(size, size - gap),
 		Vector2(size - gap, size),
-		Vector2(size - gap - border, size)
+		Vector2(size - gap - sqrt2, size)
 	)
 	
 	# bottom
@@ -112,8 +114,8 @@ func _draw():
 	# tl
 	draw_polygon_by_apex(
 		Vector2(gap, 0),
-		Vector2(gap + border, 0),
-		Vector2(0, gap + border),
+		Vector2(gap + sqrt2, 0),
+		Vector2(0, gap + sqrt2),
 		Vector2(0, gap)
 	)
 	

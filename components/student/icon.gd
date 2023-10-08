@@ -1,3 +1,4 @@
+@tool
 class_name StudentIcon
 extends Node2D
 
@@ -47,8 +48,12 @@ func _process(delta):
 
 
 func update():
-	var avatar_texture = load("res://assets/images/students/icon/%d.webp" % id)
-	avatar_sprite.set_texture(avatar_texture)
+	var avatar_path = "res://assets/images/students/icon/%d.webp" % id
+	var avatar_texture = load(avatar_path)
+	if avatar_texture != null:
+		avatar_sprite.set_texture(avatar_texture)
+	else:
+		print("头像资源（%s）加载失败" % avatar_path)
 	
 	var name = DataLoader.i18n["student.%d.name" % id]
 	name_label.set_text(name)
